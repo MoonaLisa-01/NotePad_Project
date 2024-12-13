@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.noteapp.MainController">
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem text="New Note" onAction="#createNote"/>
+                <MenuItem text="Save All Notes" onAction="#saveNotes"/>
+                <MenuItem text="Exit" onAction="#exitApp"/>
+            </Menu>
+            <Menu text="Edit">
+                <MenuItem text="Search Notes" onAction="#searchNotes"/>
+            </Menu>
+            <Menu text="View">
+                <MenuItem text="Themes" onAction="#changeTheme"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <ListView fx:id="notesList" prefWidth="200"/>
+    </center>
+    <right>
+        <TextArea fx:id="noteContent" promptText="Type your note here..." prefWidth="300"/>
+    </right>
+</BorderPane>
